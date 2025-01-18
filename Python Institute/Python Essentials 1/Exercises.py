@@ -54,3 +54,24 @@ print("    *********      "*2)
 # """Python"""
 
 print("\"I\'m\"", "\"\"learning\"\"", "\"\"\"Python\"\"\"", sep="\n")
+
+# Exercise 2.4.1.7
+john = 3
+mary = 5
+adam = 6
+
+total_apples = john + mary + adam
+
+print(john, mary, adam, sep=",")
+print("Total apples: ", total_apples)
+
+# Exercise 2.4.1.9
+kilometers = 12.25
+miles = 7.38
+
+miles_to_kilometers = miles * 1.61
+kilometers_to_miles = kilometers / 1.61
+
+print(miles, "miles is", round(miles_to_kilometers, 2), "kilometers")
+print(kilometers, "kilometers is", round(kilometers_to_miles, 2), "miles")
+
