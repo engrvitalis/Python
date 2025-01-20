@@ -1,0 +1,8 @@
+# Exercise 3.2.1.9 (The break statement)
+word = input("Enter a word or chupacabra to exit: ")
+
+while True:
+    if word == "chupacabra": break
+    word = input("Enter a word or chupacabra to exit: ")
+
+print("You've successfully left the loop.")

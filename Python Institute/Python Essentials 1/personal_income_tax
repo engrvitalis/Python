@@ -1,0 +1,17 @@
+# Exercise 3.1.11 (Tax calculator)
+# A tax calculator that computes the Personal Income Tax (PIT) 
+# based on a citizen's income, applying an 18% rate with a tax relief 
+# for incomes up to 85,528 thalers, and a fixed tax amount plus a 
+# 32% rate on the surplus for higher incomes, rounding the result to 
+# the nearest whole thaler while ensuring no negative tax values.
+income = float(input("Enter the annual income: "))
+
+#
+# Write your code here.
+#
+if income <= 85528: tax = .18 * income - 556.2
+else: tax = 14839.2 + .32 * (income - 85528)
+
+if tax < 0: tax = 0.0
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
