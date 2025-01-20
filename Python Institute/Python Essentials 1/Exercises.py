@@ -119,3 +119,28 @@ else: tax = 14839.2 + .32 * (income - 85528)
 if tax < 0: tax = 0.0
 tax = round(tax, 0)
 print("The tax is:", tax, "thalers")
+
+# Exercise 3.1.12 (Leap year calculator)
+# If the year is not divisible by 4, it is a common year.
+# If it is divisible by 4 but not by 100, it is a leap year.
+# If it is divisible by 100 but not by 400, it is a common year.
+# If it is divisible by 400, it is a leap year.
+
+year = int(input("Enter a year: "))
+
+#
+# Write your code here.
+#	
+# Check if the year is within the Gregorian calendar period
+if year < 1582:
+    print("Not within the Gregorian calendar period.")
+else:
+# Determine if it's a leap year or a common year
+    if year % 4 != 0:
+        print("Common year")
+    elif year % 100 != 0:
+        print("Leap year")
+    elif year % 400 != 0:
+        print("Common year")
+    else:
+        print("Leap year")
