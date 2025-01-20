@@ -144,3 +144,37 @@ else:
         print("Common year")
     else:
         print("Leap year")
+
+# Exercise 3.2.1.3
+secret_number = 777
+
+print(
+"""
++================================+
+| Welcome to my game, muggle!    |
+| Enter an integer number        |
+| and guess what number I've     |
+| picked for you.                |
+| So, what is the secret number? |
++================================+
+""")
+guess = int(input("Enter your number: "))
+
+while guess != secret_number:
+    print("Ha ha! You're stuck in my loop!")
+    guess = int(input("Enter your number: "))
+print("Well done, muggle! You are free now.")
+
+# Exercise 3.2.1.6 (Counting Mississippily)
+import time
+
+# Write a for loop that counts to five.
+for i in range(5):
+    # Body of the loop - print the loop iteration number and the word "Mississippi".
+    print(i+1, "Mississippi")
+    # Body of the loop - use: time.sleep(1)
+    time.sleep(1)
+
+# Write a print function with the final message.
+print("Ready or not, here I come!")
+
