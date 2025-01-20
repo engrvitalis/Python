@@ -89,3 +89,33 @@ x = float(input("Enter value for x: "))
 y = 1/(x + (1/(x + (1/(x + (1/x))))))
 
 print("y =", y)
+
+# Exercise 2.6.1.11
+hour = 12 # int(input("Starting time (hours): "))
+mins = 17 # int(input("Starting time (minutes): "))
+dura = 59 # int(input("Event duration (minutes): "))
+# find a total of all minutes
+total_minutes = hour * 60 + mins + dura
+# find a number of hours hidden in minutes and update the hour
+end_hour = (total_minutes // 60) % 24
+end_minute = total_minutes % 60
+
+print(end_hour, ":", end_minute, sep='')
+
+# Exercise 3.1.11 (Tax calculator)
+# A tax calculator that computes the Personal Income Tax (PIT) 
+# based on a citizen's income, applying an 18% rate with a tax relief 
+# for incomes up to 85,528 thalers, and a fixed tax amount plus a 
+# 32% rate on the surplus for higher incomes, rounding the result to 
+# the nearest whole thaler while ensuring no negative tax values.
+income = float(input("Enter the annual income: "))
+
+#
+# Write your code here.
+#
+if income <= 85528: tax = .18 * income - 556.2
+else: tax = 14839.2 + .32 * (income - 85528)
+
+if tax < 0: tax = 0.0
+tax = round(tax, 0)
+print("The tax is:", tax, "thalers")
